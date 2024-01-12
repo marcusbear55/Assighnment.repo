@@ -1,0 +1,12 @@
+---
+- name: Create Nodes and Bucket
+  hosts: tags_Name_MD_ansible_server
+  hosts: tags_Name_MDono_ansible_server2
+  gather_facts: true
+  become: true
+  vars_files:
+    - "vars.yaml"
+
+  roles:
+    - bucket_create
+    - node_create
